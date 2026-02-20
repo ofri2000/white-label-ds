@@ -3,7 +3,7 @@
  * React + TypeScript component library
  *
  * Import the CSS variables stylesheet at your app root:
- *   import '@sandvik/white-label-ds/dist/styles/variables.css';
+ *   import 'white-label-ds/dist/styles/variables.css';
  */
 
 // ─── Tokens ───
