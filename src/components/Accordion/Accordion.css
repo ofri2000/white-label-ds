@@ -1,0 +1,23 @@
+/* Accordion — Figma: Accordion */
+.ds-accordion { display: flex; flex-direction: column; border: 1px solid var(--border-default); border-radius: var(--radius-m); overflow: hidden; }
+.ds-accordion__item + .ds-accordion__item { border-top: 1px solid var(--border-default); }
+
+.ds-accordion__trigger {
+  all: unset; display: flex; align-items: center; justify-content: space-between; width: 100%; box-sizing: border-box;
+  padding: var(--space-m) var(--space-s);
+  font-family: var(--font-text); font-size: var(--font-size-body-s); font-weight: var(--font-weight-bold); line-height: var(--line-height-body-s);
+  color: var(--content-primary); cursor: pointer;
+  transition: background-color 120ms ease;
+}
+.ds-accordion__trigger:hover:not(:disabled) { background: var(--fill-hovered); }
+.ds-accordion__trigger:focus-visible { outline: var(--focus-outline-button) solid var(--border-focused); outline-offset: -2px; }
+.ds-accordion__trigger:disabled { color: var(--content-disabled); cursor: not-allowed; }
+
+.ds-accordion__chevron { display: flex; transition: transform 200ms ease; color: var(--content-secondary); }
+.ds-accordion__item--open .ds-accordion__chevron { transform: rotate(180deg); }
+.ds-accordion__item--disabled .ds-accordion__chevron { color: var(--content-disabled); }
+
+.ds-accordion__panel {
+  padding: 0 var(--space-s) var(--space-m);
+  font-family: var(--font-text); font-size: var(--font-size-body-s); line-height: var(--line-height-body-s); color: var(--content-secondary);
+}

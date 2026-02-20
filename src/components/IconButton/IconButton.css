@@ -1,0 +1,77 @@
+/* IconButton — Figma: Icon Button */
+
+.ds-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease;
+  user-select: none;
+}
+
+.ds-icon-btn:focus-visible {
+  outline: var(--focus-outline-button) solid var(--border-focused);
+  outline-offset: 1px;
+}
+
+.ds-icon-btn:disabled {
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.ds-icon-btn--medium {
+  width: var(--size-m);
+  height: var(--size-m);
+  border-radius: var(--radius-m);
+}
+
+.ds-icon-btn--small {
+  width: var(--size-s);
+  height: var(--size-s);
+  border-radius: var(--radius-s);
+}
+
+/* Primary */
+.ds-icon-btn--primary {
+  background: var(--fill-inverted);
+  color: var(--content-inverted);
+}
+.ds-icon-btn--primary:hover:not(:disabled) { background: var(--color-neutral-7); }
+.ds-icon-btn--primary:active:not(:disabled) { background: var(--color-neutral-8); }
+.ds-icon-btn--primary:disabled { background: var(--fill-button-disabled); color: var(--content-disabled); }
+
+/* Secondary */
+.ds-icon-btn--secondary {
+  background: var(--fill-button-default);
+  color: var(--content-primary);
+}
+.ds-icon-btn--secondary:hover:not(:disabled) { background: var(--fill-button-hovered); }
+.ds-icon-btn--secondary:active:not(:disabled) { background: var(--fill-button-latched); color: var(--content-inverted); }
+.ds-icon-btn--secondary:disabled { background: var(--fill-button-disabled); color: var(--content-disabled); }
+
+/* Ghost */
+.ds-icon-btn--ghost {
+  background: transparent;
+  color: var(--content-primary);
+}
+.ds-icon-btn--ghost:hover:not(:disabled) { background: var(--fill-hovered); }
+.ds-icon-btn--ghost:active:not(:disabled) { background: var(--fill-button-latched); color: var(--content-inverted); }
+.ds-icon-btn--ghost:disabled { color: var(--content-disabled); }
+
+/* Icon */
+.ds-icon-btn__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size-m);
+  height: var(--icon-size-m);
+}
+.ds-icon-btn--small .ds-icon-btn__icon {
+  width: var(--icon-size-s);
+  height: var(--icon-size-s);
+}
+.ds-icon-btn__icon svg {
+  width: 100%;
+  height: 100%;
+}

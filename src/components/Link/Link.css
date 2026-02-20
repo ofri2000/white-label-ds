@@ -1,0 +1,9 @@
+/* Link — Figma: Link */
+.ds-link {
+  font-family: var(--font-text); font-size: var(--font-size-label-m); font-weight: var(--font-weight-medium); line-height: var(--line-height-label-m);
+  color: var(--content-accent-cta); text-decoration: underline; cursor: pointer;
+  transition: color 120ms ease;
+}
+.ds-link:hover { color: var(--content-accent-hovered); }
+.ds-link:focus-visible { outline: var(--focus-outline-button) solid var(--border-focused); outline-offset: 1px; border-radius: 2px; }
+.ds-link--disabled { color: var(--content-disabled); pointer-events: none; cursor: not-allowed; }

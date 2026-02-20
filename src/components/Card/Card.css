@@ -1,0 +1,11 @@
+/* Card — Figma: Card */
+.ds-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-l);
+  padding: var(--space-m);
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+.ds-card:hover:not(.ds-card--disabled) { border-color: var(--color-neutral-4); box-shadow: var(--shadow-2); }
+.ds-card:focus-within:not(.ds-card--disabled) { border-color: var(--border-focused); outline: var(--focus-outline-input) solid var(--border-focused); outline-offset: -1px; }
+.ds-card--disabled { opacity: 0.5; pointer-events: none; }

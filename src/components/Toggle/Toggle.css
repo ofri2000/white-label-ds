@@ -1,0 +1,36 @@
+/* Toggle — Figma: Toggle */
+.ds-toggle { display: inline-flex; align-items: center; gap: var(--space-2xs); cursor: pointer; user-select: none; }
+.ds-toggle--disabled { cursor: not-allowed; }
+.ds-toggle__native { position: absolute; opacity: 0; width: 0; height: 0; }
+
+.ds-toggle__track {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background: var(--fill-off-default);
+  transition: background-color 150ms ease;
+  flex-shrink: 0;
+}
+.ds-toggle:hover:not(.ds-toggle--disabled) .ds-toggle__track { background: var(--fill-off-hovered); }
+.ds-toggle__native:checked ~ .ds-toggle__track { background: var(--fill-on-default); }
+.ds-toggle:hover:not(.ds-toggle--disabled) .ds-toggle__native:checked ~ .ds-toggle__track { background: var(--fill-on-hovered); }
+.ds-toggle--disabled .ds-toggle__track { opacity: 0.5; }
+
+.ds-toggle__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-full);
+  background: var(--color-white);
+  transition: transform 150ms ease;
+  box-shadow: var(--shadow-1);
+}
+.ds-toggle__native:checked ~ .ds-toggle__track .ds-toggle__thumb { transform: translateX(16px); }
+
+.ds-toggle__native:focus-visible ~ .ds-toggle__track { outline: var(--focus-outline-button) solid var(--border-focused); outline-offset: 1px; }
+
+.ds-toggle__label { font-family: var(--font-text); font-size: var(--font-size-label-m); font-weight: var(--font-weight-regular); line-height: var(--line-height-label-m); color: var(--content-primary); }
+.ds-toggle--disabled .ds-toggle__label { color: var(--content-disabled); }

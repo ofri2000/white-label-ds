@@ -1,0 +1,22 @@
+/* Toast — Figma: Toast */
+.ds-toast {
+  display: inline-flex; align-items: center; gap: var(--space-2xs);
+  min-width: 240px; max-width: 480px;
+  height: var(--size-xl);
+  padding: 0 var(--space-s);
+  border-radius: var(--radius-l);
+  background: var(--fill-inverted);
+  color: var(--content-inverted);
+  font-family: var(--font-text); font-size: var(--font-size-label-m); font-weight: var(--font-weight-medium); line-height: var(--line-height-label-m);
+  box-shadow: var(--shadow-4);
+}
+
+.ds-toast__icon { display: flex; flex-shrink: 0; }
+.ds-toast--success .ds-toast__icon { color: var(--color-success); }
+.ds-toast--error .ds-toast__icon { color: var(--color-error); }
+.ds-toast--warning .ds-toast__icon { color: var(--color-warning); }
+
+.ds-toast__content { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ds-toast__action { flex-shrink: 0; }
+.ds-toast__close { all: unset; display: flex; cursor: pointer; color: var(--content-inverted); opacity: 0.6; }
+.ds-toast__close:hover { opacity: 1; }

@@ -1,0 +1,11 @@
+/* Modal — Figma: Modal */
+.ds-modal { border: none; border-radius: var(--radius-l); padding: 0; background: var(--bg-modal); box-shadow: var(--shadow-5); max-width: 540px; width: 100%; }
+.ds-modal::backdrop { background: var(--fill-dimming); }
+.ds-modal__container { display: flex; flex-direction: column; }
+.ds-modal__header { display: flex; align-items: center; justify-content: space-between; padding: var(--space-l) var(--space-l) var(--space-s); }
+.ds-modal__title { margin: 0; font-family: var(--font-heading); font-size: var(--font-size-heading-m); font-weight: var(--font-weight-bold); line-height: var(--line-height-heading-m); color: var(--content-primary); }
+.ds-modal__close { all: unset; display: flex; cursor: pointer; color: var(--content-secondary); border-radius: var(--radius-m); }
+.ds-modal__close:hover { color: var(--content-primary); }
+.ds-modal__close:focus-visible { outline: var(--focus-outline-button) solid var(--border-focused); }
+.ds-modal__body { padding: var(--space-s) var(--space-l); font-family: var(--font-text); font-size: var(--font-size-body-s); line-height: var(--line-height-body-s); color: var(--content-secondary); }
+.ds-modal__footer { display: flex; gap: var(--space-2xs); justify-content: flex-end; padding: var(--space-s) var(--space-l) var(--space-l); }

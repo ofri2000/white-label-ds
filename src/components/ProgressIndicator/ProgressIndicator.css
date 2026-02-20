@@ -1,0 +1,7 @@
+/* ProgressIndicator — Figma: Progress Indicator */
+.ds-progress--bar { display: flex; align-items: center; width: 100%; }
+.ds-progress__track { flex: 1; height: 4px; border-radius: var(--radius-full); background: var(--color-neutral-3); overflow: hidden; }
+.ds-progress__fill { height: 100%; border-radius: var(--radius-full); background: var(--fill-accent-default); transition: width 200ms ease; }
+
+.ds-progress--circle { display: inline-flex; align-items: center; gap: var(--space-2xs); }
+.ds-progress__value { font-family: var(--font-text); font-size: var(--font-size-label-s); font-weight: var(--font-weight-medium); line-height: var(--line-height-label-s); color: var(--content-primary); }

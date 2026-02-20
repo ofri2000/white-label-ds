@@ -1,0 +1,17 @@
+/* Chip — Figma: Chip */
+.ds-chip {
+  display: inline-flex; align-items: center; gap: var(--space-3xs);
+  height: var(--size-s); padding: 0 var(--space-xs);
+  border-radius: var(--radius-full);
+  background: var(--fill-button-default);
+  transition: background-color 120ms ease;
+  cursor: default;
+}
+.ds-chip:hover:not(.ds-chip--disabled) { background: var(--fill-button-hovered); }
+.ds-chip--disabled { background: var(--fill-button-disabled); }
+
+.ds-chip__label { font-family: var(--font-text); font-size: var(--font-size-label-m); font-weight: var(--font-weight-medium); line-height: var(--line-height-label-m); color: var(--content-primary); }
+.ds-chip--disabled .ds-chip__label { color: var(--content-disabled); }
+
+.ds-chip__remove { all: unset; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--content-secondary); }
+.ds-chip__remove:hover { color: var(--content-primary); }

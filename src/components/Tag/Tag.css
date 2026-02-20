@@ -1,0 +1,15 @@
+/* Tag — Figma: Tag */
+.ds-tag {
+  all: unset; display: inline-flex; align-items: center; justify-content: center;
+  height: var(--size-xs); padding: 0 var(--space-2xs);
+  border-radius: var(--radius-s);
+  background: var(--fill-button-default);
+  font-family: var(--font-text); font-size: var(--font-size-label-s); font-weight: var(--font-weight-medium); line-height: var(--line-height-label-s);
+  color: var(--content-primary); cursor: pointer; user-select: none;
+  transition: background-color 120ms ease;
+}
+.ds-tag:hover:not(:disabled) { background: var(--fill-button-hovered); }
+.ds-tag--selected { background: var(--fill-button-latched); color: var(--content-inverted); }
+.ds-tag--selected:hover:not(:disabled) { background: var(--color-neutral-7); }
+.ds-tag:disabled, .ds-tag--disabled { background: var(--fill-button-disabled); color: var(--content-disabled); cursor: not-allowed; }
+.ds-tag:focus-visible { outline: var(--focus-outline-button) solid var(--border-focused); outline-offset: 1px; }

@@ -1,0 +1,6 @@
+/* Skeleton — Figma: Skeleton */
+.ds-skeleton {
+  border-radius: var(--radius-m);
+  background: var(--skeleton-a);
+  animation: ds-skeleton-pulse 1.5s ease-in-out infinite;
+}

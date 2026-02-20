@@ -1,0 +1,18 @@
+/* Tooltip — Figma: Tooltip (Top/Bottom/Left/Right) */
+.ds-tooltip-wrapper { position: relative; display: inline-flex; }
+
+.ds-tooltip {
+  position: absolute; z-index: 10;
+  max-width: 200px;
+  padding: var(--space-3xs) var(--space-2xs);
+  border-radius: var(--radius-s);
+  background: var(--fill-tooltip);
+  color: var(--content-inverted);
+  font-family: var(--font-text); font-size: var(--font-size-label-s); font-weight: var(--font-weight-regular); line-height: var(--line-height-label-s);
+  white-space: nowrap; pointer-events: none;
+}
+
+.ds-tooltip--top { bottom: calc(100% + 4px); left: 50%; transform: translateX(-50%); }
+.ds-tooltip--bottom { top: calc(100% + 4px); left: 50%; transform: translateX(-50%); }
+.ds-tooltip--left { right: calc(100% + 4px); top: 50%; transform: translateY(-50%); }
+.ds-tooltip--right { left: calc(100% + 4px); top: 50%; transform: translateY(-50%); }

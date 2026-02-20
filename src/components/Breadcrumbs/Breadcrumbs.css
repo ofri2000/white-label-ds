@@ -1,0 +1,11 @@
+/* Breadcrumbs — Figma: Breadcrumbs */
+.ds-breadcrumbs__list { display: flex; align-items: center; gap: var(--space-none); list-style: none; margin: 0; padding: 0; }
+.ds-breadcrumbs__item { display: flex; align-items: center; }
+.ds-breadcrumbs__link {
+  font-family: var(--font-text); font-size: var(--font-size-label-m); font-weight: var(--font-weight-medium); line-height: var(--line-height-label-m);
+  color: var(--content-accent-cta); text-decoration: none; cursor: pointer;
+}
+.ds-breadcrumbs__link:hover { color: var(--content-accent-hovered); text-decoration: underline; }
+.ds-breadcrumbs__link:focus-visible { outline: var(--focus-outline-button) solid var(--border-focused); outline-offset: 1px; border-radius: 2px; }
+.ds-breadcrumbs__separator { display: flex; color: var(--content-disabled); }
+.ds-breadcrumbs__current { font-family: var(--font-text); font-size: var(--font-size-label-m); font-weight: var(--font-weight-medium); line-height: var(--line-height-label-m); color: var(--content-primary); }

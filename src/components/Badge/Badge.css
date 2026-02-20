@@ -1,0 +1,20 @@
+/* Badge — Figma: Badge (Blue, Black, Outline, White, Gold) */
+.ds-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 var(--space-2xs);
+  border-radius: var(--radius-full);
+  font-family: var(--font-text);
+  font-size: var(--font-size-label-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-label-xs);
+  white-space: nowrap;
+}
+.ds-badge--blue { background: var(--fill-accent-default); color: var(--content-inverted); }
+.ds-badge--black { background: var(--fill-inverted); color: var(--content-inverted); }
+.ds-badge--outline { background: transparent; color: var(--content-primary); border: 1px solid var(--border-default); }
+.ds-badge--white { background: var(--color-white); color: var(--content-primary); }
+.ds-badge--gold { background: var(--color-gold); color: var(--content-inverted); }

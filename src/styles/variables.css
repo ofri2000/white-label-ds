@@ -1,0 +1,254 @@
+/**
+ * CSS Custom Properties — White Label Design System
+ * Generated from design-tokens.ts and Figma file: White-Label-DS-2
+ * Import this stylesheet at your application root.
+ */
+
+:root {
+  /* ═══════════════════════════════════════════
+     COLOR PRIMITIVES
+     ═══════════════════════════════════════════ */
+
+  /* Neutrals */
+  --color-neutral-1: #f8f8f9;
+  --color-neutral-2: #f1f1f2;
+  --color-neutral-3: #e5e5e6;
+  --color-neutral-4: #9d9d9e;
+  --color-neutral-5: #6e6e71;
+  --color-neutral-6: #575758;
+  --color-neutral-7: #434344;
+  --color-neutral-8: #242425;
+  --color-neutral-9: #1b1b1c;
+  --color-white: #ffffff;
+  --color-pitch-black: #101011;
+
+  /* Gold */
+  --color-gold: #a08c64;
+  --color-gold-1: #ebe6dc;
+  --color-gold-2: #beaf93;
+  --color-gold-3: #73644b;
+
+  /* Electric Blue */
+  --color-blue: #1467f5;
+  --color-blue-1: #e0ecff;
+  --color-blue-2: #669eff;
+  --color-blue-3: #002e7d;
+
+  /* Error */
+  --color-error: #e83030;
+  --color-error-1: #fff5f5;
+  --color-error-2: #f76e6e;
+  --color-error-3: #800000;
+
+  /* Warning */
+  --color-warning: #f2cc0d;
+  --color-warning-1: #fffcf0;
+  --color-warning-2: #f6d94d;
+  --color-warning-3: #917a08;
+
+  /* Success */
+  --color-success: #62ac53;
+  --color-success-1: #c4f7ba;
+  --color-success-2: #77cc66;
+  --color-success-3: #3e6935;
+
+  /* ═══════════════════════════════════════════
+     SEMANTIC — FILL
+     ═══════════════════════════════════════════ */
+  --fill-accent-default: var(--color-blue);
+  --fill-accent-latched: var(--color-blue-3);
+  --fill-accent-hovered: var(--color-blue-3);
+  --fill-accent-disabled: var(--color-neutral-3);
+  --fill-button-default: var(--color-neutral-2);
+  --fill-button-latched: var(--color-pitch-black);
+  --fill-button-hovered: var(--color-neutral-3);
+  --fill-button-disabled: var(--color-neutral-3);
+  --fill-input-default: var(--color-neutral-2);
+  --fill-input-hovered: var(--color-neutral-3);
+  --fill-input-pressed: var(--color-white);
+  --fill-input-disabled: var(--color-white);
+  --fill-input-focused: var(--color-white);
+  --fill-input-error: var(--color-white);
+  --fill-input-warning: var(--color-warning-1);
+  --fill-inverted: var(--color-pitch-black);
+  --fill-hovered: var(--color-neutral-2);
+  --fill-disabled: var(--color-neutral-1);
+  --fill-selected: var(--color-neutral-1);
+  --fill-dimming: rgba(0, 0, 0, 0.4);
+  --fill-button-error-default: var(--color-error);
+  --fill-button-error-hovered: var(--color-error-2);
+  --fill-button-error-latched: var(--color-error-3);
+  --fill-button-success-default: var(--color-success);
+  --fill-button-success-hovered: var(--color-success-2);
+  --fill-button-success-latched: var(--color-success-3);
+  --fill-tooltip: var(--color-pitch-black);
+  --fill-off-default: var(--color-neutral-4);
+  --fill-off-hovered: var(--color-neutral-5);
+  --fill-on-default: var(--color-pitch-black);
+  --fill-on-hovered: var(--color-neutral-6);
+  --fill-menu-hovered: var(--color-neutral-1);
+  --fill-menu-selected: var(--color-neutral-1);
+
+  /* ═══════════════════════════════════════════
+     SEMANTIC — BORDER
+     ═══════════════════════════════════════════ */
+  --border-input-default: var(--color-neutral-3);
+  --border-input-hovered: var(--color-neutral-3);
+  --border-input-disabled: var(--color-neutral-3);
+  --border-input-error: var(--color-error);
+  --border-button-default: var(--color-neutral-2);
+  --border-button-hovered: var(--color-neutral-3);
+  --border-button-latched: var(--color-neutral-6);
+  --border-button-disabled: var(--color-neutral-3);
+  --border-focused: var(--color-blue);
+  --border-default: var(--color-neutral-3);
+  --border-inverted: var(--color-white);
+  --border-white: var(--color-white);
+  --border-black: var(--color-pitch-black);
+
+  /* ═══════════════════════════════════════════
+     SEMANTIC — CONTENT
+     ═══════════════════════════════════════════ */
+  --content-primary: var(--color-pitch-black);
+  --content-inverted: var(--color-white);
+  --content-disabled: var(--color-neutral-4);
+  --content-error: var(--color-error);
+  --content-accent-cta: var(--color-blue);
+  --content-secondary: var(--color-neutral-5);
+  --content-accent: var(--color-blue);
+  --content-accent-hovered: var(--color-blue-3);
+  --content-warning: var(--color-warning);
+  --content-success: var(--color-success);
+
+  /* ═══════════════════════════════════════════
+     SEMANTIC — BACKGROUND
+     ═══════════════════════════════════════════ */
+  --bg-primary: var(--color-white);
+  --bg-secondary: var(--color-neutral-1);
+  --bg-tertiary: var(--color-neutral-2);
+  --bg-overlay: var(--color-white);
+  --bg-inverted: var(--color-pitch-black);
+  --bg-modal: var(--color-white);
+
+  /* ═══════════════════════════════════════════
+     CORNER RADIUS
+     ═══════════════════════════════════════════ */
+  --radius-s: 4px;
+  --radius-m: 6px;
+  --radius-l: 10px;
+  --radius-xl: 22px;
+  --radius-full: 1000px;
+
+  /* ═══════════════════════════════════════════
+     SIZING
+     ═══════════════════════════════════════════ */
+  --size-3xs: 16px;
+  --size-2xs: 20px;
+  --size-xs: 24px;
+  --size-s: 32px;
+  --size-m: 40px;
+  --size-l: 48px;
+  --size-xl: 64px;
+  --size-2xl: 80px;
+
+  --icon-size-2xs: 12px;
+  --icon-size-xs: 16px;
+  --icon-size-s: 20px;
+  --icon-size-m: 24px;
+  --icon-size-l: 32px;
+  --icon-size-xl: 48px;
+
+  --focus-outline-input: 2px;
+  --focus-outline-button: 4px;
+
+  /* ═══════════════════════════════════════════
+     SPACING
+     ═══════════════════════════════════════════ */
+  --space-none: 0px;
+  --space-3xs: 4px;
+  --space-2xs: 8px;
+  --space-xs: 12px;
+  --space-s: 16px;
+  --space-m: 20px;
+  --space-l: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 72px;
+  --space-4xl: 96px;
+  --space-5xl: 128px;
+
+  /* ═══════════════════════════════════════════
+     TYPOGRAPHY
+     ═══════════════════════════════════════════ */
+  --font-heading: 'Inter', sans-serif;
+  --font-text: 'Inter', sans-serif;
+
+  --font-size-heading-4xl: 104px;
+  --font-size-heading-3xl: 80px;
+  --font-size-heading-2xl: 56px;
+  --font-size-heading-xl: 40px;
+  --font-size-heading-l: 24px;
+  --font-size-heading-m: 18px;
+  --font-size-heading-s: 16px;
+  --font-size-body-l: 18px;
+  --font-size-body-m: 16px;
+  --font-size-body-s: 14px;
+  --font-size-body-xs: 12px;
+  --font-size-body-2xs: 10px;
+  --font-size-label-l: 18px;
+  --font-size-label-m: 14px;
+  --font-size-label-s: 12px;
+  --font-size-label-xs: 10px;
+
+  --line-height-heading-4xl: 104px;
+  --line-height-heading-3xl: 80px;
+  --line-height-heading-2xl: 60px;
+  --line-height-heading-xl: 44px;
+  --line-height-heading-l: 30px;
+  --line-height-heading-m: 22px;
+  --line-height-heading-s: 20px;
+  --line-height-body-l: 24px;
+  --line-height-body-m: 20px;
+  --line-height-body-s: 18px;
+  --line-height-body-xs: 16px;
+  --line-height-body-2xs: 14px;
+  --line-height-label-l: 22px;
+  --line-height-label-m: 16px;
+  --line-height-label-s: 14px;
+  --line-height-label-xs: 12px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* ═══════════════════════════════════════════
+     SHADOWS
+     ═══════════════════════════════════════════ */
+  --shadow-1: 0px 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-2: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-3: 0px 4px 8px rgba(0, 0, 0, 0.12);
+  --shadow-4: 0px 8px 16px rgba(0, 0, 0, 0.16);
+  --shadow-5: 0px 16px 32px rgba(0, 0, 0, 0.20);
+
+  /* ═══════════════════════════════════════════
+     SKELETON
+     ═══════════════════════════════════════════ */
+  --skeleton-a: rgba(157, 157, 157, 0.3);
+  --skeleton-b: rgba(157, 157, 157, 0.5);
+}
+
+/* ═══════════════════════════════════════════
+   SKELETON ANIMATION
+   ═══════════════════════════════════════════ */
+@keyframes ds-skeleton-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* ═══════════════════════════════════════════
+   SPINNER ANIMATION
+   ═══════════════════════════════════════════ */
+@keyframes ds-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

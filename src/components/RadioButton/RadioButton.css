@@ -1,0 +1,28 @@
+/* RadioButton — Figma: Radio Button */
+.ds-radio { display: inline-flex; align-items: center; gap: var(--space-2xs); cursor: pointer; user-select: none; }
+.ds-radio--disabled { cursor: not-allowed; }
+.ds-radio__native { position: absolute; opacity: 0; width: 0; height: 0; }
+
+.ds-radio__circle {
+  display: flex; align-items: center; justify-content: center;
+  width: var(--size-2xs); height: var(--size-2xs);
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-neutral-4);
+  background: var(--color-white);
+  transition: border-color 120ms ease;
+  flex-shrink: 0;
+}
+
+.ds-radio__native:checked ~ .ds-radio__circle {
+  border-color: var(--fill-accent-default);
+  border-width: 6px;
+}
+.ds-radio:hover:not(.ds-radio--disabled) .ds-radio__circle { border-color: var(--content-primary); }
+.ds-radio__native:checked:hover ~ .ds-radio__circle { border-color: var(--fill-accent-hovered); }
+.ds-radio__native:focus-visible ~ .ds-radio__circle { outline: var(--focus-outline-button) solid var(--border-focused); outline-offset: 1px; }
+.ds-radio--disabled .ds-radio__circle { opacity: 0.5; }
+.ds-radio--error .ds-radio__circle { border-color: var(--color-error); }
+.ds-radio--error .ds-radio__native:checked ~ .ds-radio__circle { border-color: var(--color-error); }
+
+.ds-radio__label { font-family: var(--font-text); font-size: var(--font-size-label-m); font-weight: var(--font-weight-regular); line-height: var(--line-height-label-m); color: var(--content-primary); }
+.ds-radio--disabled .ds-radio__label { color: var(--content-disabled); }

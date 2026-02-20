@@ -1,0 +1,15 @@
+/* Tabs — Figma: Tabs */
+.ds-tabs { display: flex; border-bottom: 1px solid var(--border-default); gap: 0; }
+
+.ds-tabs__tab {
+  all: unset; display: flex; align-items: center; justify-content: center;
+  padding: var(--space-s) var(--space-s);
+  font-family: var(--font-text); font-size: var(--font-size-label-m); font-weight: var(--font-weight-medium); line-height: var(--line-height-label-m);
+  color: var(--content-secondary); cursor: pointer;
+  border-bottom: 2px solid transparent; margin-bottom: -1px;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+.ds-tabs__tab:hover:not(:disabled) { color: var(--content-primary); }
+.ds-tabs__tab--active { color: var(--content-primary); border-bottom-color: var(--content-primary); font-weight: var(--font-weight-bold); }
+.ds-tabs__tab--disabled { color: var(--content-disabled); cursor: not-allowed; }
+.ds-tabs__tab:focus-visible { outline: var(--focus-outline-button) solid var(--border-focused); outline-offset: -2px; }

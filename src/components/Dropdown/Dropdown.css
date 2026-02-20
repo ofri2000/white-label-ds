@@ -1,0 +1,26 @@
+/* Dropdown — Figma: Dropdown */
+.ds-dropdown { display: flex; flex-direction: column; gap: var(--space-2xs); }
+
+.ds-dropdown__field {
+  position: relative; display: flex; align-items: center;
+  height: var(--size-m); border-radius: var(--radius-m);
+  background: var(--fill-input-default); border: 1px solid transparent;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+.ds-dropdown__field:hover:not(.ds-dropdown--disabled > .ds-dropdown__field):not(.ds-dropdown--error > .ds-dropdown__field) { background: var(--fill-input-hovered); }
+.ds-dropdown__field:focus-within:not(.ds-dropdown--error > .ds-dropdown__field) { background: var(--fill-input-focused); border-color: var(--border-focused); border-width: var(--focus-outline-input); }
+.ds-dropdown--error .ds-dropdown__field { background: var(--fill-input-error); border: 1px solid var(--border-input-error); }
+.ds-dropdown--disabled .ds-dropdown__field { background: var(--fill-input-disabled); border: 1px solid var(--border-input-disabled); }
+
+.ds-dropdown__native {
+  all: unset; flex: 1; padding: 0 var(--space-xl) 0 var(--space-xs);
+  font-family: var(--font-text); font-size: var(--font-size-label-m); font-weight: var(--font-weight-regular); line-height: var(--line-height-label-m);
+  color: var(--content-primary); cursor: pointer;
+}
+.ds-dropdown--disabled .ds-dropdown__native { color: var(--content-disabled); cursor: not-allowed; }
+
+.ds-dropdown__chevron { position: absolute; right: var(--space-2xs); pointer-events: none; color: var(--content-secondary); display: flex; }
+.ds-dropdown--disabled .ds-dropdown__chevron { color: var(--content-disabled); }
+
+.ds-dropdown__description { font-family: var(--font-text); font-size: var(--font-size-label-s); line-height: var(--line-height-label-s); color: var(--content-secondary); margin: 0; }
+.ds-dropdown__error-text { font-family: var(--font-text); font-size: var(--font-size-label-s); line-height: var(--line-height-label-s); color: var(--content-error); margin: 0; }

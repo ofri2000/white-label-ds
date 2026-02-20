@@ -1,0 +1,73 @@
+/* Checkbox — Figma: Checkbox */
+.ds-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  cursor: pointer;
+  user-select: none;
+}
+.ds-checkbox--disabled { cursor: not-allowed; }
+
+.ds-checkbox__native {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ds-checkbox__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-2xs);
+  height: var(--size-2xs);
+  border-radius: var(--radius-s);
+  border: 1.5px solid var(--color-neutral-4);
+  background: var(--color-white);
+  color: var(--color-white);
+  transition: background-color 120ms ease, border-color 120ms ease;
+  flex-shrink: 0;
+}
+
+.ds-checkbox__box--checked,
+.ds-checkbox__box--partial {
+  background: var(--fill-accent-default);
+  border-color: var(--fill-accent-default);
+}
+
+.ds-checkbox:hover:not(.ds-checkbox--disabled) .ds-checkbox__box:not(.ds-checkbox__box--checked):not(.ds-checkbox__box--partial) {
+  border-color: var(--content-primary);
+}
+
+.ds-checkbox:hover:not(.ds-checkbox--disabled) .ds-checkbox__box--checked,
+.ds-checkbox:hover:not(.ds-checkbox--disabled) .ds-checkbox__box--partial {
+  background: var(--fill-accent-hovered);
+  border-color: var(--fill-accent-hovered);
+}
+
+.ds-checkbox__native:focus-visible ~ .ds-checkbox__box {
+  outline: var(--focus-outline-button) solid var(--border-focused);
+  outline-offset: 1px;
+}
+
+.ds-checkbox--disabled .ds-checkbox__box {
+  opacity: 0.5;
+}
+
+.ds-checkbox--error .ds-checkbox__box {
+  border-color: var(--color-error);
+}
+.ds-checkbox--error .ds-checkbox__box--checked,
+.ds-checkbox--error .ds-checkbox__box--partial {
+  background: var(--color-error);
+  border-color: var(--color-error);
+}
+
+.ds-checkbox__label {
+  font-family: var(--font-text);
+  font-size: var(--font-size-label-m);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-label-m);
+  color: var(--content-primary);
+}
+.ds-checkbox--disabled .ds-checkbox__label { color: var(--content-disabled); }
