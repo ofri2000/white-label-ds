@@ -1,5 +1,5 @@
 {
-  "name": "@sandvik/white-label-ds",
+  "name": "white-label-ds",
   "version": "1.0.0",
   "description": "White Label Design System — React + TypeScript component library based on Figma design tokens.",
   "main": "dist/index.js",
