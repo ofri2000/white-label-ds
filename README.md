@@ -16,19 +16,19 @@ A production-grade React + TypeScript component library built from the [White-La
 ## Quick Start
 
 ```bash
-npm install @sandvik/white-label-ds
+npm install white-label-ds
 ```
 
 Import the CSS variables at your app root:
 
 ```tsx
-import '@sandvik/white-label-ds/dist/styles/variables.css';
+import 'white-label-ds/dist/styles/variables.css';
 ```
 
 Use components:
 
 ```tsx
-import { Button, TextInput, Toggle, Badge } from '@sandvik/white-label-ds';
+import { Button, TextInput, Toggle, Badge } from 'white-label-ds';
 
 function App() {
   return (
